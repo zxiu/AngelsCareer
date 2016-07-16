@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">AngelsCareer</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_cv">Curriculum vitae</string>
+
+    <string name="page_personal_info">Personal Information</string>
+    <string name="page_working_exp">Working Experiences</string>
+
+    <!--Hint-->
+    <string name="first_name">first name</string>
+    <string name="last_name">last name</string>
+    <string name="birthday">birthday</string>
+</resources>
