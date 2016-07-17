@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity
     Map<Integer, AngelsFragment> fragmentMap = new HashMap<>();
 
     Toolbar toolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -90,26 +91,36 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
         AngelsFragment fragment = fragmentMap.get(id);
-
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_me) {
-            if (fragment == null){
-                fragment = new CvFragment();
+        if (fragment == null) {
+            switch (id) {
+                case R.id.nav_me:
+                    fragment = new CvFragment();
+                    break;
             }
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).commit();
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
         }
-        getSupportActionBar().setTitle(fragment.getTitleResId());
+        if (fragment != null) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, fragment).commit();
+            getSupportActionBar().setTitle(fragment.getTitleResId());
+        }
+//        if (id == R.id.nav_camera) {
+//            // Handle the camera action
+//        } else if (id == R.id.nav_me) {
+//            if (fragment == null) {
+//                fragment = new CvFragment();
+//            }
+//
+//        } else if (id == R.id.nav_gallery) {
+//
+//        } else if (id == R.id.nav_slideshow) {
+//
+//        } else if (id == R.id.nav_manage) {
+//
+//        } else if (id == R.id.nav_share) {
+//
+//        } else if (id == R.id.nav_send) {
+//
+//        }
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
