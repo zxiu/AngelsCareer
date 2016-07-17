@@ -3,14 +3,19 @@ package angel.zxiu.career.view;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.res.TypedArray;
 import android.graphics.Rect;
 import android.support.design.widget.TextInputEditText;
 import android.text.InputType;
 import android.util.AttributeSet;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.widget.DatePicker;
-import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
+import angel.zxiu.career.App;
 import angel.zxiu.career.R;
 
 /**
@@ -18,6 +23,7 @@ import angel.zxiu.career.R;
  */
 public class TextInputEditTextView extends TextInputEditText {
 
+    public String key;
 
     public TextInputEditTextView(Context context) {
         this(context, null);
@@ -25,14 +31,40 @@ public class TextInputEditTextView extends TextInputEditText {
 
     public TextInputEditTextView(Context context, AttributeSet attrs) {
         super(context, attrs);
+        final TypedArray a = context.obtainStyledAttributes(
+                attrs, R.styleable.TextInputEditTextView);
+        key = a.getString(R.styleable.TextInputEditTextView_key);
+        a.recycle();
+
         setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (isInputDateTime()) {
                     showDatePicker();
                 }
+                ;
             }
         });
+        setOnEditorActionListener(new OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView textView, int actionId, KeyEvent keyEvent) {
+                if (actionId == EditorInfo.IME_ACTION_SEARCH ||
+                        actionId == EditorInfo.IME_ACTION_DONE ||
+                        keyEvent.getAction() == KeyEvent.ACTION_DOWN &&
+                                keyEvent.getKeyCode() == KeyEvent.KEYCODE_ENTER) {
+                    if (!keyEvent.isShiftPressed()) {
+                        saveValue();
+                        return true;
+                    }
+                }
+                return false;
+            }
+        });
+        setText(App.getSharedPreferences().getString(key, null));
+    }
+
+    protected void saveValue() {
+        App.getEditor().putString(key, getText().toString()).apply();
     }
 
     @Override
@@ -40,6 +72,8 @@ public class TextInputEditTextView extends TextInputEditText {
         super.onFocusChanged(focused, direction, previouslyFocusedRect);
         if (focused && isInputDateTime()) {
             showDatePicker();
+        } else {
+            saveValue();
         }
     }
 
