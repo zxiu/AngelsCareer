@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="key_first_name">first_name</string>
+    <string name="key_last_name">last_name</string>
+    <string name="key_birthday">birthday</string>
+</resources>

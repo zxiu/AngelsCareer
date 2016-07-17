@@ -31,21 +31,6 @@ public abstract class AngelsPage extends FrameLayout {
 
     public abstract int getTitleResId();
 
-    void showDatePicker(final EditText view) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
-        builder.setMessage(R.string.birthday);
-        final DatePicker datePicker = new DatePicker(getContext());
-        builder.setView(datePicker);
-        builder.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                ((EditText) view).setText(datePicker.getYear() + "-" + datePicker.getMonth() + "-" + datePicker.getDayOfMonth());
-            }
-        });
-        builder.setNegativeButton(android.R.string.cancel, null);
-        builder.show();
-    }
-
     void traverseViews(final View view) {
         if (view instanceof ViewGroup) {
             for (int i = 0; i < ((ViewGroup) view).getChildCount(); i++) {
@@ -53,23 +38,6 @@ public abstract class AngelsPage extends FrameLayout {
             }
         } else if (view instanceof EditText) {
             editableViews.add(view);
-            if (((EditText) view).getInputType() == InputType.TYPE_CLASS_DATETIME) {
-                view.setOnClickListener(new OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        showDatePicker((EditText) view);
-                    }
-                });
-                view.setOnFocusChangeListener(new OnFocusChangeListener() {
-                    @Override
-                    public void onFocusChange(final View view, boolean b) {
-                        if (b) {
-                            showDatePicker((EditText) view);
-                        }
-                    }
-                });
-
-            }
         }
     }
 
