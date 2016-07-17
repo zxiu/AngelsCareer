@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--Personal Information-->
     <string name="key_first_name">first_name</string>
     <string name="key_last_name">last_name</string>
     <string name="key_birthday">birthday</string>
@@ -9,4 +10,7 @@
     <string name="key_country">country</string>
     <string name="key_email">email</string>
     <string name="key_website">website</string>
+
+    <!--Working Experience-->
+    <string name="key_working_experience">Working Experience</string>
 </resources>

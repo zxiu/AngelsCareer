@@ -10,10 +10,8 @@ import android.text.InputType;
 import android.util.AttributeSet;
 import android.view.KeyEvent;
 import android.view.View;
-import android.view.inputmethod.EditorInfo;
 import android.widget.DatePicker;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import angel.zxiu.career.App;
 import angel.zxiu.career.R;
@@ -21,57 +19,28 @@ import angel.zxiu.career.R;
 /**
  * Created by zxiu on 17.07.16.
  */
-public class TextInputEditTextView extends TextInputEditText {
+public class DateEditText extends AngelsEditText {
 
-    public String key;
-
-    public TextInputEditTextView(Context context) {
+    public DateEditText(Context context) {
         this(context, null);
     }
 
-    public TextInputEditTextView(Context context, AttributeSet attrs) {
+    public DateEditText(Context context, AttributeSet attrs) {
         super(context, attrs);
-        final TypedArray a = context.obtainStyledAttributes(
-                attrs, R.styleable.TextInputEditTextView);
-        key = a.getString(R.styleable.TextInputEditTextView_key);
-        a.recycle();
-
         setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (isInputDateTime()) {
-                    showDatePicker();
-                }
-                ;
+                showDatePicker();
             }
         });
-        setOnEditorActionListener(new OnEditorActionListener() {
-            @Override
-            public boolean onEditorAction(TextView textView, int actionId, KeyEvent keyEvent) {
-                saveValue();
-                return true;
-            }
-        });
-        setText(App.getSharedPreferences().getString(key, null));
-    }
-
-    protected void saveValue() {
-//        Toast.makeText(getContext(), "Save "+key, Toast.LENGTH_LONG).show();
-        App.getEditor().putString(key, getText().toString()).apply();
     }
 
     @Override
     protected void onFocusChanged(boolean focused, int direction, Rect previouslyFocusedRect) {
         super.onFocusChanged(focused, direction, previouslyFocusedRect);
-        if (focused && isInputDateTime()) {
+        if (focused) {
             showDatePicker();
-        } else {
-            saveValue();
         }
-    }
-
-    public boolean isInputDateTime() {
-        return getInputType() == InputType.TYPE_CLASS_DATETIME;
     }
 
     void showDatePicker() {
