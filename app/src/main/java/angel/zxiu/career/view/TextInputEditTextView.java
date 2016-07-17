@@ -48,22 +48,15 @@ public class TextInputEditTextView extends TextInputEditText {
         setOnEditorActionListener(new OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView textView, int actionId, KeyEvent keyEvent) {
-                if (actionId == EditorInfo.IME_ACTION_SEARCH ||
-                        actionId == EditorInfo.IME_ACTION_DONE ||
-                        keyEvent.getAction() == KeyEvent.ACTION_DOWN &&
-                                keyEvent.getKeyCode() == KeyEvent.KEYCODE_ENTER) {
-                    if (!keyEvent.isShiftPressed()) {
-                        saveValue();
-                        return true;
-                    }
-                }
-                return false;
+                saveValue();
+                return true;
             }
         });
         setText(App.getSharedPreferences().getString(key, null));
     }
 
     protected void saveValue() {
+//        Toast.makeText(getContext(), "Save "+key, Toast.LENGTH_LONG).show();
         App.getEditor().putString(key, getText().toString()).apply();
     }
 

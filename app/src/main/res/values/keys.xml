@@ -3,4 +3,10 @@
     <string name="key_first_name">first_name</string>
     <string name="key_last_name">last_name</string>
     <string name="key_birthday">birthday</string>
+    <string name="key_street">street</string>
+    <string name="key_postal_code">postal_code</string>
+    <string name="key_city">city</string>
+    <string name="key_country">country</string>
+    <string name="key_email">email</string>
+    <string name="key_website">website</string>
 </resources>

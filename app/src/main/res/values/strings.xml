@@ -12,7 +12,14 @@
     <string name="page_working_exp">Working Experiences</string>
 
     <!--Hint-->
-    <string name="first_name">first name</string>
-    <string name="last_name">last name</string>
-    <string name="birthday">birthday</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="birthday">Birthday</string>
+    <string name="street">Street with house No.</string>
+    <string name="postal_code">Postal code</string>
+    <string name="city">City</string>
+    <string name="country">Country</string>
+    <string name="email">Email</string>
+    <string name="website">Website</string>
 </resources>
+
