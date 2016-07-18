@@ -13,7 +13,7 @@ public class WorkingExpBlock extends AngelsBlock {
 
     @Override
     public int getContentLayoutResId() {
-        return R.layout.block_personal_info;
+        return R.layout.block_working_exp;
     }
 
     public WorkingExpBlock(Context context) {

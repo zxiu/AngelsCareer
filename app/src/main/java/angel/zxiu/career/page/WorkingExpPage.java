@@ -4,20 +4,20 @@ import android.content.Context;
 import android.view.View;
 
 import angel.zxiu.career.R;
+import angel.zxiu.career.block.AngelsBlock;
+import angel.zxiu.career.block.WorkingExpBlock;
 
 /**
  * Created by zxiu on 15.07.16.
  */
-public class WorkingExpPage extends AngelsPage{
+public class WorkingExpPage extends AngelsPage {
     public WorkingExpPage(Context context) {
         super(context);
     }
 
-    @Override
-    public int getLayoutResId() {
-        return R.layout.page_working_exp;
+    public AngelsBlock getDefaultBlock() {
+        return new WorkingExpBlock(getContext());
     }
-
 
     @Override
     public int getTitleResId() {
