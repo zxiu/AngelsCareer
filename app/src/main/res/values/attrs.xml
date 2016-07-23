@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="AngelsEditText">
-        <attr name="key" format="string"/>
+        <attr name="key" format="string" />
+    </declare-styleable>
+    <declare-styleable name="AngelsLinearLayout">
+        <attr name="path" format="string" />
+        <attr name="multiple" format="boolean"/>
     </declare-styleable>
 </resources>

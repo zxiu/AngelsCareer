@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Paths-->
+    <string name="path.curriculum_vitae"></string>
+    <string name="path.personal_info">personal_info</string>
+    <string name="path.working_exp">working_exp</string>
+    <string name="path.employer">employer</string>
+
+    <!--Personal Information-->
+    <string name="key.first_name">first_name</string>
+    <string name="key.last_name">last_name</string>
+    <string name="key.birthday">birthday</string>
+    <string name="key.street">street</string>
+    <string name="key.postal_code">postal_code</string>
+    <string name="key.city">city</string>
+    <string name="key.country">country</string>
+    <string name="key.email">email</string>
+    <string name="key.website">website</string>
+
+    <!--Working Experience-->
+    <string name="key.from">from</string>
+    <string name="key.to">to</string>
+    <string name="key.position">position</string>
+    <string name="key.name">name</string>
+</resources>

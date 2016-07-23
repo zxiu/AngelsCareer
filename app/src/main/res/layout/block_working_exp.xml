@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<angel.zxiu.career.view.AngelsLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:multiple="true"
+    app:path="@string/path.working_exp">
+
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -11,9 +14,9 @@
         <angel.zxiu.career.view.AngelsEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/key_working_experience"
+            android:hint="from"
             android:imeOptions="flagNavigateNext"
             android:maxLines="1"
-            app:key="@string/key_working_experience" />
+            app:key="@string/key.from" />
     </android.support.design.widget.TextInputLayout>
-</LinearLayout>
+</angel.zxiu.career.view.AngelsLinearLayout>

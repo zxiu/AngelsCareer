@@ -13,6 +13,9 @@ import android.view.View;
 import android.widget.DatePicker;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import angel.zxiu.career.App;
 import angel.zxiu.career.R;
 
@@ -22,6 +25,7 @@ import angel.zxiu.career.R;
 public class AngelsEditText extends TextInputEditText {
 
     public String key;
+    public List<String> paths = new ArrayList<>();
 
     public AngelsEditText(Context context) {
         this(context, null);

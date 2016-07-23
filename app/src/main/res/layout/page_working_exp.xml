@@ -20,7 +20,7 @@
                 android:imeOptions="actionDone"
                 android:inputType="textWebEditText"
                 android:maxLines="1"
-                app:key="@string/key_website" />
+                app:key="@string/key.website" />
 
         </android.support.design.widget.TextInputLayout>
     </LinearLayout>

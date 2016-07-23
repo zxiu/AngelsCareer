@@ -1,0 +1,17 @@
+{
+  "data": {
+    "personal_info": {
+      "first_name": "string",
+      "last_name": "string",
+      "email": "string",
+      "birthday": "date",
+      "street_no": "string",
+      "postal_code": "string",
+      "city": "string",
+      "website": "string"
+    },
+    "working_exp": [
+
+    ]
+  }
+}
