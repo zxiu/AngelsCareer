@@ -8,7 +8,5 @@ import java.util.List;
  */
 public class CurriculumVitae {
     PersonalInfo personalInfo = new PersonalInfo();
-    List<WorkingExp> workingExpList = new ArrayList(){{
-        add(new WorkingExp());
-    }};
+    List<WorkingExp> workingExpList = new ArrayList();
 }
