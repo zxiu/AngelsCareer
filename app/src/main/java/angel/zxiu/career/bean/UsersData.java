@@ -7,5 +7,5 @@ import com.orm.SugarRecord;
  */
 public class UsersData extends AngelsData{
 
-    CurriculumVitae curriculumVitae = new CurriculumVitae();
+    public CurriculumVitae curriculumVitae = new CurriculumVitae();
 }

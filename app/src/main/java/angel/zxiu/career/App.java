@@ -8,13 +8,14 @@ import com.alibaba.fastjson.JSON;
 import com.orm.SugarApp;
 
 import angel.zxiu.career.bean.AngelsData;
+import angel.zxiu.career.bean.UsersData;
 
 /**
  * Created by zxiu on 17.07.16.
  */
 public class App extends SugarApp {
     public static Application context;
-    public static AngelsData angelsData;
+    public static UsersData usersData;
 
     @Override
     public void onCreate() {
@@ -31,19 +32,19 @@ public class App extends SugarApp {
     }
 
     public static void saveData() {
-        getEditor().putString("AngelsData", JSON.toJSONString(angelsData));
+        getEditor().putString("AngelsData", JSON.toJSONString(usersData));
     }
 
     public static AngelsData getData() {
-        if (angelsData == null) {
+        if (usersData == null) {
             String dataString = getSharedPreferences().getString("AngelsData", null);
             if (!TextUtils.isEmpty(dataString)) {
-                angelsData = JSON.parseObject(dataString, AngelsData.class);
+                usersData = JSON.parseObject(dataString, UsersData.class);
             }
         }
-        if (angelsData == null) {
-            angelsData = new AngelsData();
+        if (usersData == null) {
+            usersData = new UsersData();
         }
-        return angelsData;
+        return usersData;
     }
 }

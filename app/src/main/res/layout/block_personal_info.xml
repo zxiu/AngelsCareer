@@ -1,36 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <angel.zxiu.career.view.AngelsLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    app:multiple="false"
-    app:path="@string/path.personal_info">
+    android:orientation="vertical">
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <angel.zxiu.career.view.AngelsEditText
+        <android.support.design.widget.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/first_name"
             android:imeOptions="flagNavigateNext"
-            android:maxLines="1"
-            app:key="@string/key.first_name" />
+            android:maxLines="1" />
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <angel.zxiu.career.view.AngelsEditText
+        <android.support.design.widget.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/last_name"
             android:imeOptions="flagNavigateNext"
-            android:maxLines="1"
-            app:key="@string/key.last_name" />
+            android:maxLines="1" />
     </android.support.design.widget.TextInputLayout>
 
 
@@ -44,21 +39,19 @@
             android:hint="@string/birthday"
             android:imeOptions="flagNavigateNext"
             android:inputType="datetime"
-            android:maxLines="1"
-            app:key="@string/key.birthday" />
+            android:maxLines="1" />
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <angel.zxiu.career.view.AngelsEditText
+        <android.support.design.widget.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/street"
             android:imeOptions="flagNavigateNext"
-            android:maxLines="1"
-            app:key="@string/key.street" />
+            android:maxLines="1" />
     </android.support.design.widget.TextInputLayout>
 
     <TableLayout
@@ -74,26 +67,24 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <angel.zxiu.career.view.AngelsEditText
+                <android.support.design.widget.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/postal_code"
                     android:imeOptions="flagNavigateNext"
                     android:inputType="number|text"
-                    android:maxLines="1"
-                    app:key="@string/key.postal_code" />
+                    android:maxLines="1" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <angel.zxiu.career.view.AngelsEditText
+                <android.support.design.widget.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/city"
-                    android:maxLines="1"
-                    app:key="@string/key.city" />
+                    android:maxLines="1" />
             </android.support.design.widget.TextInputLayout>
         </TableRow>
     </TableLayout>
@@ -102,40 +93,37 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <angel.zxiu.career.view.AngelsEditText
+        <android.support.design.widget.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/country"
             android:imeOptions="flagNavigateNext"
-            android:maxLines="1"
-            app:key="@string/key.country" />
+            android:maxLines="1" />
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <angel.zxiu.career.view.AngelsEditText
+        <android.support.design.widget.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/email"
             android:imeOptions="flagNavigateNext"
             android:inputType="textEmailAddress"
-            android:maxLines="1"
-            app:key="@string/key.email" />
+            android:maxLines="1" />
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <angel.zxiu.career.view.AngelsEditText
+        <android.support.design.widget.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/website"
             android:imeOptions="actionDone"
             android:inputType="textWebEditText"
-            android:maxLines="1"
-            app:key="@string/key.website" />
+            android:maxLines="1" />
     </android.support.design.widget.TextInputLayout>
 </angel.zxiu.career.view.AngelsLinearLayout>
