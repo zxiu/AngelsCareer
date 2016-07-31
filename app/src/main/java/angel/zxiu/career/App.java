@@ -5,13 +5,14 @@ import android.content.SharedPreferences;
 import android.text.TextUtils;
 
 import com.alibaba.fastjson.JSON;
+import com.orm.SugarApp;
 
 import angel.zxiu.career.bean.AngelsData;
 
 /**
  * Created by zxiu on 17.07.16.
  */
-public class App extends Application {
+public class App extends SugarApp {
     public static Application context;
     public static AngelsData angelsData;
 

@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Created by zxiu on 19.07.16.
  */
-public class CurriculumVitae {
-    PersonalInfo personalInfo = new PersonalInfo();
-    List<WorkingExp> workingExpList = new ArrayList();
+public class CurriculumVitae extends AngelsData {
+    public PersonalInfo personalInfo = new PersonalInfo();
+    public List<WorkingExp> workingExpList = new ArrayList();
 }
